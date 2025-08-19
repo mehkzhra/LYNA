@@ -1,0 +1,20 @@
+[
+  {
+    "id": "C001",
+    "specialty": "General Medicine",
+    "patient": { "age": 45, "gender": "Male", "chief_complaint": "Chest pain for 2 hours" },
+    "history_points": ["Pain radiates to left arm", "Sweating", "Nausea"],
+    "exam_points": ["BP 90/60", "Pulse 110"],
+    "investigations": {
+      "ECG": "ST elevation in II, III, aVF",
+      "Troponin I": "Positive"
+    },
+    "gold_diagnosis": "Acute Inferior Myocardial Infarction",
+    "gold_minimal_tests": ["ECG", "Troponin I"],
+    "learning_points": [
+      "Inferior MI shows ST elevation in II, III, aVF.",
+      "Avoid nitrates in suspected RV infarct; prioritize reperfusion pathways."
+    ],
+    "red_flags": ["Hypotension with chest pain", "Syncope"]
+  }
+]
