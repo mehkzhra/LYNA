@@ -1,20 +1,152 @@
 [
   {
-    "id": "C001",
-    "specialty": "General Medicine",
-    "patient": { "age": 45, "gender": "Male", "chief_complaint": "Chest pain for 2 hours" },
-    "history_points": ["Pain radiates to left arm", "Sweating", "Nausea"],
-    "exam_points": ["BP 90/60", "Pulse 110"],
-    "investigations": {
-      "ECG": "ST elevation in II, III, aVF",
-      "Troponin I": "Positive"
+    "department": "Cardiology",
+    "case_id": "C-10234",
+    "patient": {
+      "name": "John Doe",
+      "age": 45,
+      "gender": "Male",
+      "symptoms": ["chest pain", "shortness of breath"],
+      "medical_history": ["hypertension", "diabetes"],
+      "allergies": ["penicillin"]
     },
-    "gold_diagnosis": "Acute Inferior Myocardial Infarction",
-    "gold_minimal_tests": ["ECG", "Troponin I"],
-    "learning_points": [
-      "Inferior MI shows ST elevation in II, III, aVF.",
-      "Avoid nitrates in suspected RV infarct; prioritize reperfusion pathways."
+    "diagnosis": {
+      "preliminary": "Suspected angina",
+      "tests_recommended": ["ECG", "Echocardiogram"]
+    },
+    "suggestions": [
+      {
+        "treatment": "Perform ECG immediately",
+        "possible_medications": ["Aspirin 75mg", "Statins"],
+        "lifestyle_changes": ["Low-salt diet", "Regular exercise"],
+        "confidence_level": "High",
+        "source": "Cardiology Dept Guidelines v2.3"
+      }
     ],
-    "red_flags": ["Hypotension with chest pain", "Syncope"]
+    "feedback": {
+      "verified_by": "Dr. Ahmed",
+      "notes": "Patient requires immediate ECG. Suggestion is valid.",
+      "status": "Approved"
+    }
+  },
+  {
+    "department": "Neurology",
+    "case_id": "N-20456",
+    "patient": {
+      "name": "Alice Smith",
+      "age": 38,
+      "gender": "Female",
+      "symptoms": ["severe headache", "blurred vision"],
+      "medical_history": ["migraine"],
+      "allergies": []
+    },
+    "diagnosis": {
+      "preliminary": "Possible migraine attack",
+      "tests_recommended": ["MRI brain", "Blood pressure monitoring"]
+    },
+    "suggestions": [
+      {
+        "treatment": "Prescribe migraine relief medication",
+        "possible_medications": ["Sumatriptan", "Ibuprofen"],
+        "lifestyle_changes": ["Avoid stress", "Proper sleep schedule"],
+        "confidence_level": "Medium",
+        "source": "Neurology Best Practices v4.1"
+      }
+    ],
+    "feedback": {
+      "verified_by": "Dr. Khan",
+      "notes": "MRI required to rule out other causes.",
+      "status": "Pending"
+    }
+  },
+  {
+    "department": "Orthopedics",
+    "case_id": "O-30987",
+    "patient": {
+      "name": "Michael Johnson",
+      "age": 60,
+      "gender": "Male",
+      "symptoms": ["knee pain", "difficulty walking"],
+      "medical_history": ["arthritis"],
+      "allergies": ["ibuprofen"]
+    },
+    "diagnosis": {
+      "preliminary": "Osteoarthritis in left knee",
+      "tests_recommended": ["X-ray knee joint"]
+    },
+    "suggestions": [
+      {
+        "treatment": "Recommend physiotherapy and pain management",
+        "possible_medications": ["Acetaminophen", "Topical NSAIDs"],
+        "lifestyle_changes": ["Weight management", "Low-impact exercise"],
+        "confidence_level": "High",
+        "source": "Orthopedic Society Guidelines 2024"
+      }
+    ],
+    "feedback": {
+      "verified_by": "Dr. Patel",
+      "notes": "Physiotherapy sessions recommended before surgery.",
+      "status": "Approved"
+    }
+  },
+  {
+    "department": "Dermatology",
+    "case_id": "D-41256",
+    "patient": {
+      "name": "Sophia Lee",
+      "age": 25,
+      "gender": "Female",
+      "symptoms": ["skin rash", "itching"],
+      "medical_history": ["eczema"],
+      "allergies": ["sulfa drugs"]
+    },
+    "diagnosis": {
+      "preliminary": "Eczema flare-up",
+      "tests_recommended": ["Patch test"]
+    },
+    "suggestions": [
+      {
+        "treatment": "Apply topical corticosteroid cream",
+        "possible_medications": ["Hydrocortisone cream", "Moisturizers"],
+        "lifestyle_changes": ["Avoid harsh soaps", "Use fragrance-free lotion"],
+        "confidence_level": "High",
+        "source": "Dermatology Clinical Guide v3.0"
+      }
+    ],
+    "feedback": {
+      "verified_by": "Dr. Fatima",
+      "notes": "Topical treatment recommended, patch test optional.",
+      "status": "Approved"
+    }
+  },
+  {
+    "department": "Pediatrics",
+    "case_id": "P-52314",
+    "patient": {
+      "name": "Emily Brown",
+      "age": 5,
+      "gender": "Female",
+      "symptoms": ["fever", "sore throat"],
+      "medical_history": [],
+      "allergies": ["amoxicillin"]
+    },
+    "diagnosis": {
+      "preliminary": "Suspected strep throat",
+      "tests_recommended": ["Throat swab test"]
+    },
+    "suggestions": [
+      {
+        "treatment": "Prescribe antibiotics if test positive",
+        "possible_medications": ["Azithromycin"],
+        "lifestyle_changes": ["Hydration", "Rest"],
+        "confidence_level": "Medium",
+        "source": "Pediatric Association Guidelines v1.5"
+      }
+    ],
+    "feedback": {
+      "verified_by": "Dr. Omar",
+      "notes": "Test before prescribing antibiotics.",
+      "status": "Pending"
+    }
   }
 ]

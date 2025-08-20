@@ -1,11 +1,11 @@
-from app.services.llm_client import ask_llm
+# app/services/patient_agent.py
+import json
+from app.services import llm_client
 
-PATIENT_PROMPT = """You are a standardized patient... (system prompt here)"""
-
-def get_patient_reply(case, transcript, user_msg):
-    # Check if it's an investigation request
-    for inv, result in case.get("investigations", {}).items():
-        if inv.lower() in user_msg.lower():
-            return result
-    # Otherwise return LLM response (stubbed)
-    return ask_llm(PATIENT_PROMPT, user_msg)
+def simulate_patient(department_data: dict, user_message: str) -> str:
+    """
+    Doctor (user) ke sawal ka jawab GPT-5 patient ke tor pe dega
+    """
+    patient_context = json.dumps(department_data["patient"])
+    reply = llm_client.get_patient_reply(user_message, patient_context)
+    return reply

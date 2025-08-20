@@ -1,20 +1,43 @@
 from fastapi import FastAPI
-from app.routers import cases, investigations, sessions, chat, solve, progress
+from pydantic import BaseModel
+import os
+from openai import OpenAI
+from dotenv import load_dotenv
 
-app = FastAPI(
-    title="Medical Case-Based Learning MVP",
-    description="Educational simulation only — not medical advice.",
-    version="0.1.0"
-)
+# 🔹 Load environment variables
+load_dotenv()
 
-# Routers include
-app.include_router(cases.router)
-app.include_router(investigations.router)
-app.include_router(sessions.router)
-app.include_router(chat.router)
-app.include_router(solve.router)
-app.include_router(progress.router)
+# 🔹 OpenAI client initialize
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
+# 🔹 FastAPI app
+app = FastAPI(title="Medical MVP Backend")
+
+# 🔹 Request body schema
+class ChatRequest(BaseModel):
+    message: str
+
+# 🔹 Root endpoint
 @app.get("/")
-def home():
-    return {"msg": "Welcome to Medical MVP Backend"}
+def read_root():
+    return {"message": "Medical MVP Backend is running 🚀"}
+
+# 🔹 Chatbot endpoint
+@app.post("/chat")
+def chat_with_bot(request: ChatRequest):
+    try:
+        response = client.chat.completions.create(
+            model="gpt-5",
+            messages=[
+                {"role": "system", "content": "You are a patient describing your condition to a doctor. Speak like a patient."},
+                {"role": "user", "content": request.message}
+            ],
+            temperature=0.7
+        )
+
+        reply = response.choices[0].message.content
+        return {"reply": reply}
+
+    except Exception as e:
+        return {"error": str(e)}
+

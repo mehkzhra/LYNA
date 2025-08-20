@@ -1,19 +1,21 @@
+# app/services/llm_client.py
+from openai import OpenAI
 import os
-import json
 
-# Dummy LLM client for MVP
-def ask_llm(system_prompt: str, user_prompt: str):
-    # If you have an API key, here you'd call OpenAI/Groq/etc.
-    # For MVP, return a fake safe response
-    return f"(stub reply to: {user_prompt})"
+# Client initialize
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-def ask_llm_json(system_prompt: str, user_prompt: str):
-    # Return fake evaluator JSON
-    return {
-        "diagnosis_score": 3,
-        "tests_score": 2,
-        "plan_score": 2,
-        "feedback": ["Good attempt", "Missed one key test"],
-        "learning_points": ["Inferior MI shows ST elevation in II, III, aVF."],
-        "red_flags": False
-    }
+def get_patient_reply(user_message: str, patient_context: str) -> str:
+    """
+    GPT-5 ko call karega aur patient ki tarha reply karega
+    """
+    response = client.chat.completions.create(
+        model="gpt-5",   # GPT-5 model use karna hai
+        messages=[
+            {"role": "system", "content": f"You are a patient. Here is your medical background: {patient_context}"},
+            {"role": "user", "content": user_message}
+        ],
+        temperature=0.7
+    )
+
+    return response.choices[0].message.content
