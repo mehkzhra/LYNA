@@ -1,152 +1,610 @@
-[
-  {
-    "department": "Cardiology",
-    "case_id": "C-10234",
-    "patient": {
-      "name": "John Doe",
-      "age": 45,
-      "gender": "Male",
-      "symptoms": ["chest pain", "shortness of breath"],
-      "medical_history": ["hypertension", "diabetes"],
-      "allergies": ["penicillin"]
+{
+  "cases": 
+  [
+    {
+      "id": 1,
+      "category": "Cardiology",
+      "title": "Chest Pain Evaluation",
+      "description": "Patient complains of chest pain radiating to left arm.",
+      "symptoms": ["chest pain", "radiating to left arm", "shortness of breath"],
+      "diagnosis": "Acute Myocardial Infarction",
+      "predicted_diagnosis": "Acute Coronary Syndrome",
+      "severity": "High",
+      "recommended_tests": ["ECG", "Troponin I", "Echocardiogram"],
+      "treatment_plan": ["Aspirin", "Nitroglycerin", "Immediate PCI"]
     },
-    "diagnosis": {
-      "preliminary": "Suspected angina",
-      "tests_recommended": ["ECG", "Echocardiogram"]
+    {
+      "id": 2,
+      "category": "Cardiology",
+      "title": "Hypertension Management",
+      "description": "Newly diagnosed high blood pressure in a 45-year-old patient.",
+      "symptoms": ["headache", "dizziness", "elevated BP"],
+      "diagnosis": "Primary Hypertension",
+      "predicted_diagnosis": "Essential Hypertension",
+      "severity": "Medium",
+      "recommended_tests": ["BP monitoring", "Basic metabolic panel", "ECG"],
+      "treatment_plan": ["Lifestyle modification", "ACE inhibitors"]
     },
-    "suggestions": [
-      {
-        "treatment": "Perform ECG immediately",
-        "possible_medications": ["Aspirin 75mg", "Statins"],
-        "lifestyle_changes": ["Low-salt diet", "Regular exercise"],
-        "confidence_level": "High",
-        "source": "Cardiology Dept Guidelines v2.3"
-      }
-    ],
-    "feedback": {
-      "verified_by": "Dr. Ahmed",
-      "notes": "Patient requires immediate ECG. Suggestion is valid.",
-      "status": "Approved"
-    }
+    {
+      "id": 3,
+      "category": "Cardiology",
+      "title": "Arrhythmia Detection",
+      "description": "Patient presents with palpitations and irregular heartbeat.",
+      "symptoms": ["palpitations", "dizziness", "fatigue"],
+      "diagnosis": "Atrial Fibrillation",
+      "predicted_diagnosis": "Supraventricular Tachycardia",
+      "severity": "Medium",
+      "recommended_tests": ["ECG", "Holter monitor", "Echocardiogram"],
+      "treatment_plan": ["Beta blockers", "Anticoagulation"]
+    },
+    {
+      "id": 4,
+      "category": "Cardiology",
+      "title": "Heart Failure",
+      "description": "Patient with shortness of breath and edema.",
+      "symptoms": ["dyspnea", "leg swelling", "fatigue"],
+      "diagnosis": "Congestive Heart Failure",
+      "predicted_diagnosis": "Left Ventricular Dysfunction",
+      "severity": "High",
+      "recommended_tests": ["Echocardiogram", "BNP test", "Chest X-ray"],
+      "treatment_plan": ["Diuretics", "ACE inhibitors", "Beta blockers"]
+    },
+    {
+      "id": 5,
+      "category": "Cardiology",
+      "title": "Myocardial Infarction",
+      "description": "Patient presents with acute STEMI.",
+      "symptoms": ["chest pain", "nausea", "sweating"],
+      "diagnosis": "ST-Elevation Myocardial Infarction",
+      "predicted_diagnosis": "Acute Coronary Event",
+      "severity": "Critical",
+      "recommended_tests": ["ECG", "Troponin levels", "Coronary angiography"],
+      "treatment_plan": ["Immediate PCI", "Aspirin", "Anticoagulation"]
+    },
+    {
+      "id": 6,
+      "category": "Cardiology",
+      "title": "Angina Pectoris",
+      "description": "Recurrent chest pain on exertion.",
+      "symptoms": ["chest tightness", "shortness of breath", "fatigue"],
+      "diagnosis": "Stable Angina",
+      "predicted_diagnosis": "Coronary Artery Disease",
+      "severity": "Medium",
+      "recommended_tests": ["Stress test", "ECG", "Coronary CT angiography"],
+      "treatment_plan": ["Nitroglycerin", "Beta blockers", "Lifestyle modification"]
+    },
+    {
+      "id": 7,
+      "category": "Cardiology",
+      "title": "Post-PCI Follow-up",
+      "description": "Patient follows up after stent placement.",
+      "symptoms": ["mild chest discomfort", "occasional palpitations"],
+      "diagnosis": "Post-Percutaneous Coronary Intervention",
+      "predicted_diagnosis": "Stable after PCI",
+      "severity": "Low",
+      "recommended_tests": ["ECG", "Stress test", "Blood tests"],
+      "treatment_plan": ["Dual antiplatelet therapy", "Lifestyle advice"]
+    },
+    {
+      "id": 8,
+      "category": "Cardiology",
+      "title": "Congenital Heart Disease",
+      "description": "Pediatric patient with cyanosis.",
+      "symptoms": ["cyanosis", "shortness of breath", "fatigue"],
+      "diagnosis": "Tetralogy of Fallot",
+      "predicted_diagnosis": "Ventricular Septal Defect with Pulmonary Stenosis",
+      "severity": "High",
+      "recommended_tests": ["Echocardiogram", "Oxygen saturation", "Cardiac MRI"],
+      "treatment_plan": ["Surgical repair", "Monitoring", "Oxygen therapy"]
+    },
+    {
+      "id": 9,
+      "category": "Cardiology",
+      "title": "Pericarditis",
+      "description": "Patient presents with sharp chest pain worsened by lying down.",
+      "symptoms": ["chest pain", "dyspnea", "fever"],
+      "diagnosis": "Acute Pericarditis",
+      "predicted_diagnosis": "Viral Pericarditis",
+      "severity": "Medium",
+      "recommended_tests": ["ECG", "Echocardiogram", "Inflammatory markers"],
+      "treatment_plan": ["NSAIDs", "Colchicine", "Rest"]
+    },
+    {
+      "id": 10,
+      "category": "Cardiology",
+      "title": "Cardiomyopathy",
+      "description": "Patient with fatigue and enlarged heart on echo.",
+      "symptoms": ["fatigue", "dyspnea", "edema"],
+      "diagnosis": "Dilated Cardiomyopathy",
+      "predicted_diagnosis": "Heart Failure with Reduced Ejection Fraction",
+      "severity": "High",
+      "recommended_tests": ["Echocardiogram", "BNP", "ECG"],
+      "treatment_plan": ["ACE inhibitors", "Beta blockers", "Diuretics"]
+    },
+    {
+      "id": 11,
+      "category": "Neurology",
+      "title": "Migraine Headache",
+      "description": "Recurrent headaches with aura.",
+      "symptoms": ["headache", "nausea", "visual aura"],
+      "diagnosis": "Migraine with Aura",
+      "predicted_diagnosis": "Migraine without Aura",
+      "severity": "Medium",
+      "recommended_tests": ["Neurological exam", "MRI if atypical"],
+      "treatment_plan": ["Triptans", "Pain relief", "Lifestyle modification"]
+    },
+    {
+      "id": 12,
+      "category": "Neurology",
+      "title": "Stroke Evaluation",
+      "description": "Patient with sudden weakness and speech difficulty.",
+      "symptoms": ["facial droop", "slurred speech", "hemiparesis"],
+      "diagnosis": "Ischemic Stroke",
+      "predicted_diagnosis": "TIA",
+      "severity": "Critical",
+      "recommended_tests": ["CT scan", "MRI", "Carotid Doppler"],
+      "treatment_plan": ["Thrombolysis", "Antiplatelet therapy", "Rehabilitation"]
+    },
+    {
+      "id": 13,
+      "category": "Neurology",
+      "title": "Seizure Disorder",
+      "description": "New-onset generalized tonic-clonic seizure.",
+      "symptoms": ["convulsions", "loss of consciousness", "tongue biting"],
+      "diagnosis": "Epilepsy",
+      "predicted_diagnosis": "Provoked Seizure",
+      "severity": "High",
+      "recommended_tests": ["EEG", "MRI brain", "Blood glucose"],
+      "treatment_plan": ["Anti-epileptic drugs", "Patient education"]
+    },
+    {
+      "id": 14,
+      "category": "Neurology",
+      "title": "Parkinson's Disease",
+      "description": "Patient with tremor and bradykinesia.",
+      "symptoms": ["tremor", "rigidity", "slow movements"],
+      "diagnosis": "Parkinson's Disease",
+      "predicted_diagnosis": "Essential Tremor",
+      "severity": "Medium",
+      "recommended_tests": ["Neurological exam", "DaTscan"],
+      "treatment_plan": ["Levodopa/Carbidopa", "Physiotherapy"]
+    },
+    {
+      "id": 15,
+      "category": "Neurology",
+      "title": "Multiple Sclerosis",
+      "description": "Patient with numbness and vision problems.",
+      "symptoms": ["numbness", "vision changes", "fatigue"],
+      "diagnosis": "Multiple Sclerosis",
+      "predicted_diagnosis": "Optic Neuritis",
+      "severity": "High",
+      "recommended_tests": ["MRI brain and spine", "CSF analysis"],
+      "treatment_plan": ["Corticosteroids", "Disease-modifying therapy"]
+    },
+    {
+      "id": 16,
+      "category": "Neurology",
+      "title": "Guillain-Barré Syndrome",
+      "description": "Patient presents with progressive muscle weakness starting in the legs.",
+      "symptoms": ["ascending muscle weakness", "numbness", "tingling in hands and feet"],
+      "diagnosis": "Guillain-Barré Syndrome",
+      "predicted_diagnosis": "Acute Polyneuropathy",
+      "severity": "High",
+      "recommended_tests": ["Lumbar puncture", "Nerve conduction study", "Blood tests"],
+      "treatment_plan": ["IVIG therapy", "Plasmapheresis", "Supportive care"]
   },
   {
-    "department": "Neurology",
-    "case_id": "N-20456",
-    "patient": {
-      "name": "Alice Smith",
-      "age": 38,
-      "gender": "Female",
-      "symptoms": ["severe headache", "blurred vision"],
-      "medical_history": ["migraine"],
-      "allergies": []
-    },
-    "diagnosis": {
-      "preliminary": "Possible migraine attack",
-      "tests_recommended": ["MRI brain", "Blood pressure monitoring"]
-    },
-    "suggestions": [
-      {
-        "treatment": "Prescribe migraine relief medication",
-        "possible_medications": ["Sumatriptan", "Ibuprofen"],
-        "lifestyle_changes": ["Avoid stress", "Proper sleep schedule"],
-        "confidence_level": "Medium",
-        "source": "Neurology Best Practices v4.1"
-      }
-    ],
-    "feedback": {
-      "verified_by": "Dr. Khan",
-      "notes": "MRI required to rule out other causes.",
-      "status": "Pending"
-    }
+      "id": 17,
+      "category": "Neurology",
+      "title": "Bell's Palsy",
+      "description": "Sudden facial drooping on one side.",
+      "symptoms": ["facial droop", "difficulty closing eye", "loss of taste anterior tongue"],
+      "diagnosis": "Bell's Palsy",
+      "predicted_diagnosis": "Peripheral Facial Nerve Palsy",
+      "severity": "Medium",
+      "recommended_tests": ["Clinical examination", "Electromyography if unclear"],
+      "treatment_plan": ["Corticosteroids", "Eye protection", "Physical therapy"]
   },
   {
-    "department": "Orthopedics",
-    "case_id": "O-30987",
-    "patient": {
-      "name": "Michael Johnson",
-      "age": 60,
-      "gender": "Male",
-      "symptoms": ["knee pain", "difficulty walking"],
-      "medical_history": ["arthritis"],
-      "allergies": ["ibuprofen"]
-    },
-    "diagnosis": {
-      "preliminary": "Osteoarthritis in left knee",
-      "tests_recommended": ["X-ray knee joint"]
-    },
-    "suggestions": [
-      {
-        "treatment": "Recommend physiotherapy and pain management",
-        "possible_medications": ["Acetaminophen", "Topical NSAIDs"],
-        "lifestyle_changes": ["Weight management", "Low-impact exercise"],
-        "confidence_level": "High",
-        "source": "Orthopedic Society Guidelines 2024"
-      }
-    ],
-    "feedback": {
-      "verified_by": "Dr. Patel",
-      "notes": "Physiotherapy sessions recommended before surgery.",
-      "status": "Approved"
-    }
+      "id": 18,
+      "category": "Neurology",
+      "title": "Trigeminal Neuralgia",
+      "description": "Severe facial pain triggered by touch.",
+      "symptoms": ["paroxysmal facial pain", "unilateral", "triggered by chewing or brushing teeth"],
+      "diagnosis": "Trigeminal Neuralgia",
+      "predicted_diagnosis": "Neuropathic Facial Pain",
+      "severity": "High",
+      "recommended_tests": ["MRI brain", "Neurological exam"],
+      "treatment_plan": ["Carbamazepine", "Pain management", "Surgical decompression if needed"]
   },
   {
-    "department": "Dermatology",
-    "case_id": "D-41256",
-    "patient": {
-      "name": "Sophia Lee",
-      "age": 25,
-      "gender": "Female",
-      "symptoms": ["skin rash", "itching"],
-      "medical_history": ["eczema"],
-      "allergies": ["sulfa drugs"]
-    },
-    "diagnosis": {
-      "preliminary": "Eczema flare-up",
-      "tests_recommended": ["Patch test"]
-    },
-    "suggestions": [
-      {
-        "treatment": "Apply topical corticosteroid cream",
-        "possible_medications": ["Hydrocortisone cream", "Moisturizers"],
-        "lifestyle_changes": ["Avoid harsh soaps", "Use fragrance-free lotion"],
-        "confidence_level": "High",
-        "source": "Dermatology Clinical Guide v3.0"
-      }
-    ],
-    "feedback": {
-      "verified_by": "Dr. Fatima",
-      "notes": "Topical treatment recommended, patch test optional.",
-      "status": "Approved"
-    }
+      "id": 19,
+      "category": "Neurology",
+      "title": "Peripheral Neuropathy",
+      "description": "Patient with numbness and tingling in feet for months.",
+      "symptoms": ["numbness", "tingling", "burning sensation in feet"],
+      "diagnosis": "Peripheral Neuropathy",
+      "predicted_diagnosis": "Diabetic Neuropathy",
+      "severity": "Medium",
+      "recommended_tests": ["Nerve conduction studies", "Blood sugar levels", "Vitamin B12 level"],
+      "treatment_plan": ["Treat underlying cause", "Pain management", "Physical therapy"]
   },
   {
-    "department": "Pediatrics",
-    "case_id": "P-52314",
-    "patient": {
-      "name": "Emily Brown",
-      "age": 5,
-      "gender": "Female",
-      "symptoms": ["fever", "sore throat"],
-      "medical_history": [],
-      "allergies": ["amoxicillin"]
+      "id": 20,
+      "category": "Neurology",
+      "title": "Meningitis",
+      "description": "Patient presents with fever, headache, and neck stiffness.",
+      "symptoms": ["fever", "severe headache", "neck stiffness", "photophobia"],
+      "diagnosis": "Bacterial Meningitis",
+      "predicted_diagnosis": "Viral Meningitis",
+      "severity": "Critical",
+      "recommended_tests": ["Lumbar puncture", "Blood cultures", "CBC, CRP"],
+      "treatment_plan": ["IV antibiotics", "Hydration", "Monitoring for complications"]
+  },
+  {
+      "id": 21,
+      "category": "Gastroenterology",
+      "title": "Acute Pancreatitis",
+      "description": "Patient with severe epigastric pain and vomiting.",
+      "symptoms": ["epigastric pain", "vomiting", "nausea"],
+      "diagnosis": "Acute Pancreatitis",
+      "predicted_diagnosis": "Gallstone Pancreatitis",
+      "severity": "High",
+      "recommended_tests": ["Serum amylase/lipase", "Ultrasound", "CT abdomen"],
+      "treatment_plan": ["IV fluids", "Pain management", "NPO"]
     },
-    "diagnosis": {
-      "preliminary": "Suspected strep throat",
-      "tests_recommended": ["Throat swab test"]
+    {
+      "id": 22,
+      "category": "Gastroenterology",
+      "title": "Gastroesophageal Reflux",
+      "description": "Patient with heartburn and regurgitation.",
+      "symptoms": ["heartburn", "regurgitation", "acid taste"],
+      "diagnosis": "GERD",
+      "predicted_diagnosis": "Peptic Ulcer Disease",
+      "severity": "Low",
+      "recommended_tests": ["Endoscopy", "pH monitoring", "Barium swallow"],
+      "treatment_plan": ["PPIs", "Lifestyle changes", "Avoid triggers"]
     },
-    "suggestions": [
-      {
-        "treatment": "Prescribe antibiotics if test positive",
-        "possible_medications": ["Azithromycin"],
-        "lifestyle_changes": ["Hydration", "Rest"],
-        "confidence_level": "Medium",
-        "source": "Pediatric Association Guidelines v1.5"
-      }
-    ],
-    "feedback": {
-      "verified_by": "Dr. Omar",
-      "notes": "Test before prescribing antibiotics.",
-      "status": "Pending"
+    {
+      "id": 23,
+      "category": "Gastroenterology",
+      "title": "Hepatitis B Screening",
+      "description": "Patient with jaundice and fatigue.",
+      "symptoms": ["jaundice", "fatigue", "dark urine"],
+      "diagnosis": "Hepatitis B Infection",
+      "predicted_diagnosis": "Viral Hepatitis",
+      "severity": "Medium",
+      "recommended_tests": ["Liver function tests", "HBsAg", "Ultrasound liver"],
+      "treatment_plan": ["Antiviral therapy", "Monitoring liver function"]
+    },
+    {
+      "id": 24,
+      "category": "Gastroenterology",
+      "title": "Irritable Bowel Syndrome",
+      "description": "Patient with abdominal discomfort and altered bowel habits.",
+      "symptoms": ["abdominal pain", "diarrhea", "constipation"],
+      "diagnosis": "IBS",
+      "predicted_diagnosis": "Functional Gastrointestinal Disorder",
+      "severity": "Low",
+      "recommended_tests": ["Stool studies", "Blood tests", "Colonoscopy if red flags"],
+      "treatment_plan": ["Dietary modification", "Antispasmodics", "Fiber supplements"]
+    },
+    {
+      "id": 25,
+      "category": "Gastroenterology",
+      "title": "Ulcerative Colitis",
+      "description": "Patient with chronic bloody diarrhea.",
+      "symptoms": ["bloody diarrhea", "abdominal pain", "fatigue"],
+      "diagnosis": "Ulcerative Colitis",
+      "predicted_diagnosis": "Inflammatory Bowel Disease",
+      "severity": "Medium",
+      "recommended_tests": ["Colonoscopy", "Biopsy", "CRP, ESR"],
+      "treatment_plan": ["5-ASA compounds", "Corticosteroids", "Biologics if severe"]
+    },
+    {
+      "id": 26,
+      "category": "Gastroenterology",
+      "title": "Gallstones",
+      "description": "Patient with right upper quadrant pain after meals.",
+      "symptoms": ["RUQ pain", "nausea", "bloating after fatty meals"],
+      "diagnosis": "Cholelithiasis",
+      "predicted_diagnosis": "Biliary Colic",
+      "severity": "Medium",
+      "recommended_tests": ["Ultrasound abdomen", "Liver function tests", "MRCP if complicated"],
+      "treatment_plan": ["Cholecystectomy", "Pain management", "Dietary advice"]
+  },
+  {
+      "id": 27,
+      "category": "Gastroenterology",
+      "title": "Peptic Ulcer",
+      "description": "Patient with epigastric burning pain relieved by food.",
+      "symptoms": ["epigastric pain", "heartburn", "nausea"],
+      "diagnosis": "Peptic Ulcer Disease",
+      "predicted_diagnosis": "Gastritis",
+      "severity": "Medium",
+      "recommended_tests": ["Endoscopy", "H. pylori test", "CBC"],
+      "treatment_plan": ["PPIs", "H. pylori eradication", "Avoid NSAIDs"]
+  },
+  {
+      "id": 28,
+      "category": "Gastroenterology",
+      "title": "Celiac Disease",
+      "description": "Patient with chronic diarrhea and malabsorption.",
+      "symptoms": ["diarrhea", "weight loss", "bloating", "iron deficiency anemia"],
+      "diagnosis": "Celiac Disease",
+      "predicted_diagnosis": "Gluten Sensitivity",
+      "severity": "Medium",
+      "recommended_tests": ["Anti-tTG IgA", "Duodenal biopsy", "CBC, iron studies"],
+      "treatment_plan": ["Gluten-free diet", "Vitamin supplementation", "Follow-up monitoring"]
+  },
+  {
+      "id": 29,
+      "category": "Gastroenterology",
+      "title": "Diverticulitis",
+      "description": "Patient with left lower quadrant pain and fever.",
+      "symptoms": ["LLQ pain", "fever", "constipation or diarrhea"],
+      "diagnosis": "Diverticulitis",
+      "predicted_diagnosis": "Colonic Infection",
+      "severity": "Medium",
+      "recommended_tests": ["CT abdomen", "CBC", "CRP"],
+      "treatment_plan": ["Antibiotics", "Dietary modification", "Surgery if complicated"]
+  },
+  {
+      "id": 30,
+      "category": "Gastroenterology",
+      "title": "Hepatic Encephalopathy",
+      "description": "Patient with confusion and a history of liver disease.",
+      "symptoms": ["confusion", "asterixis", "sleep disturbances"],
+      "diagnosis": "Hepatic Encephalopathy",
+      "predicted_diagnosis": "Metabolic Encephalopathy",
+      "severity": "High",
+      "recommended_tests": ["Liver function tests", "Ammonia levels", "Electrolytes"],
+      "treatment_plan": ["Lactulose", "Rifaximin", "Treat underlying liver disease"]
+  },
+    {
+      "id": 31,
+      "category": "Respiratory",
+      "title": "Asthma Exacerbation",
+      "description": "Patient with wheezing and shortness of breath.",
+      "symptoms": ["wheezing", "cough", "dyspnea"],
+      "diagnosis": "Asthma Attack",
+      "predicted_diagnosis": "Exacerbated Asthma",
+      "severity": "High",
+      "recommended_tests": ["Spirometry", "Peak flow", "Chest X-ray"],
+      "treatment_plan": ["Inhaled bronchodilators", "Systemic steroids", "Oxygen therapy"]
+    },
+
+    {
+      "id": 32,
+      "category": "Respiratory",
+      "title": "Pneumonia",
+      "description": "Patient with fever, cough, and chest pain.",
+      "symptoms": ["cough", "fever", "pleuritic chest pain"],
+      "diagnosis": "Community-Acquired Pneumonia",
+      "predicted_diagnosis": "Bacterial Pneumonia",
+      "severity": "High",
+      "recommended_tests": ["Chest X-ray", "CBC", "Sputum culture"],
+      "treatment_plan": ["Antibiotics", "Oxygen therapy", "Hydration"]
+    },
+
+    {
+      "id": 33,
+      "category": "Respiratory",
+      "title": "Chronic Bronchitis",
+      "description": "Patient with chronic cough and sputum production.",
+      "symptoms": ["cough", "sputum", "dyspnea"],
+      "diagnosis": "Chronic Bronchitis",
+      "predicted_diagnosis": "COPD",
+      "severity": "Medium",
+      "recommended_tests": ["Spirometry", "Chest X-ray", "Pulmonary function tests"],
+      "treatment_plan": ["Bronchodilators", "Smoking cessation", "Pulmonary rehab"]
+    },
+
+    {
+      "id": 34,
+      "category": "Respiratory",
+      "title": "Pulmonary Embolism",
+      "description": "Patient with sudden dyspnea and chest pain.",
+      "symptoms": ["sudden shortness of breath", "pleuritic chest pain", "tachycardia"],
+      "diagnosis": "Pulmonary Embolism",
+      "predicted_diagnosis": "Deep Vein Thrombosis with PE",
+      "severity": "Critical",
+      "recommended_tests": ["CT pulmonary angiography", "D-dimer", "ECG"],
+      "treatment_plan": ["Anticoagulation", "Oxygen support", "Thrombolysis if severe"]
+    },
+
+    {
+      "id": 35,
+      "category": "Respiratory",
+      "title": "Tuberculosis",
+      "description": "Patient with chronic cough and hemoptysis.",
+      "symptoms": ["chronic cough", "hemoptysis", "weight loss"],
+      "diagnosis": "Pulmonary Tuberculosis",
+      "predicted_diagnosis": "Latent "
+    },
+    
+    {
+      "id": 36,
+      "category": "Respiratory",
+      "title": "Sleep Apnea",
+      "description": "Patient with loud snoring and daytime sleepiness.",
+      "symptoms": ["snoring", "daytime fatigue", "morning headache"],
+      "diagnosis": "Obstructive Sleep Apnea",
+      "predicted_diagnosis": "Central Sleep Apnea",
+      "severity": "Medium",
+      "recommended_tests": ["Polysomnography", "Oxygen saturation monitoring"],
+      "treatment_plan": ["CPAP therapy", "Weight loss", "Avoid alcohol before sleep"]
+    },
+    {
+      "id": 37,
+      "category": "Respiratory",
+      "title": "Chronic Obstructive Pulmonary Disease",
+      "description": "Patient with chronic cough and shortness of breath.",
+      "symptoms": ["chronic cough", "sputum", "dyspnea on exertion"],
+      "diagnosis": "COPD",
+      "predicted_diagnosis": "Chronic Bronchitis",
+      "severity": "High",
+      "recommended_tests": ["Spirometry", "Chest X-ray", "ABG"],
+      "treatment_plan": ["Bronchodilators", "Smoking cessation", "Pulmonary rehab"]
+    },
+    {
+      "id": 38,
+      "category": "Respiratory",
+      "title": "Acute Bronchitis",
+      "description": "Patient with recent cough and mild fever.",
+      "symptoms": ["cough", "sputum", "low-grade fever", "wheeze"],
+      "diagnosis": "Acute Bronchitis",
+      "predicted_diagnosis": "Viral Respiratory Infection",
+      "severity": "Low",
+      "recommended_tests": ["Chest X-ray if pneumonia suspected", "CBC"],
+      "treatment_plan": ["Supportive care", "Hydration", "Cough suppressants if needed"]
+    },
+    {
+      "id": 39,
+      "category": "Respiratory",
+      "title": "Pulmonary Fibrosis",
+      "description": "Patient with progressive shortness of breath and dry cough.",
+      "symptoms": ["dyspnea on exertion", "dry cough", "fatigue"],
+      "diagnosis": "Idiopathic Pulmonary Fibrosis",
+      "predicted_diagnosis": "Interstitial Lung Disease",
+      "severity": "High",
+      "recommended_tests": ["High-resolution CT", "Pulmonary function tests", "Oxygen saturation"],
+      "treatment_plan": ["Antifibrotic therapy", "Oxygen therapy", "Lung transplant evaluation"]
+    },
+    {
+      "id": 40,
+      "category": "Respiratory",
+      "title": "Acute Respiratory Distress Syndrome",
+      "description": "Patient in ICU with severe hypoxemia after pneumonia.",
+      "symptoms": ["severe dyspnea", "hypoxemia", "bilateral infiltrates on chest X-ray"],
+      "diagnosis": "ARDS",
+      "predicted_diagnosis": "Severe Pneumonia with Respiratory Failure",
+      "severity": "Critical",
+      "recommended_tests": ["ABG", "Chest X-ray", "Blood cultures"],
+       "treatment_plan": ["Mechanical ventilation", "Treat underlying cause", "Supportive ICU care"]
+    },
+    {
+      "id": 41,
+      "category": "Endocrinology",
+      "title": "Type 1 Diabetes Mellitus",
+      "description": "Pediatric patient with polyuria, polydipsia, and weight loss.",
+      "symptoms": ["frequent urination", "excessive thirst", "weight loss", "fatigue"],
+      "diagnosis": "Type 1 Diabetes Mellitus",
+      "predicted_diagnosis": "Autoimmune Diabetes",
+      "severity": "High",
+      "recommended_tests": ["Fasting blood glucose", "HbA1c", "Autoantibodies (GAD, IA-2)"],
+      "treatment_plan": ["Insulin therapy", "Dietary counseling", "Blood sugar monitoring"]
+    },
+    {
+      "id": 42,
+      "category": "Endocrinology",
+      "title": "Type 2 Diabetes Mellitus",
+      "description": "Adult patient with fatigue and elevated blood sugar discovered on routine check.",
+      "symptoms": ["fatigue", "blurred vision", "frequent urination"],
+      "diagnosis": "Type 2 Diabetes Mellitus",
+      "predicted_diagnosis": "Insulin Resistance",
+      "severity": "Medium",
+      "recommended_tests": ["Fasting blood glucose", "HbA1c", "Lipid profile"],
+      "treatment_plan": ["Lifestyle modification", "Metformin", "Regular monitoring"]
+    },
+    {
+      "id": 43,
+      "category": "Endocrinology",
+      "title": "Hypothyroidism",
+      "description": "Middle-aged patient with fatigue, weight gain, and dry skin.",
+      "symptoms": ["fatigue", "weight gain", "constipation", "cold intolerance"],
+      "diagnosis": "Primary Hypothyroidism",
+      "predicted_diagnosis": "Hashimoto’s Thyroiditis",
+      "severity": "Medium",
+      "recommended_tests": ["TSH", "Free T4", "Anti-TPO antibodies"],
+      "treatment_plan": ["Levothyroxine", "Periodic monitoring", "Lifestyle advice"]
+    },
+    {
+      "id": 44,
+      "category": "Endocrinology",
+      "title": "Hyperthyroidism",
+      "description": "Patient with weight loss, palpitations, and heat intolerance.",
+      "symptoms": ["weight loss", "palpitations", "tremor", "heat intolerance"],
+      "diagnosis": "Graves' Disease",
+      "predicted_diagnosis": "Toxic Multinodular Goiter",
+      "severity": "High",
+      "recommended_tests": ["TSH", "Free T4", "TSI antibodies", "Thyroid scan"],
+      "treatment_plan": ["Anti-thyroid drugs", "Beta-blockers", "Radioiodine therapy if needed"]
+    },
+    { 
+      "id": 45,
+      "category": "Endocrinology",
+      "title": "Cushing’s Syndrome",
+      "description": "Patient with central obesity, moon face, and hypertension.",
+      "symptoms": ["weight gain", "round face", "hypertension", "purple striae"],
+      "diagnosis": "Cushing’s Syndrome",
+      "predicted_diagnosis": "Exogenous Steroid-induced Hypercortisolism",
+      "severity": "High",
+      "recommended_tests": ["24-hour urinary free cortisol", "Late-night salivary cortisol", "Dexamethasone suppression test"],
+      "treatment_plan": ["Surgical removal of tumor if present", "Medication to reduce cortisol", "Monitor complications"]
+    },
+    {
+      "id": 46,
+      "category": "Endocrinology",
+      "title": "Addison’s Disease",
+      "description": "Patient with fatigue, hypotension, and hyperpigmentation.",
+      "symptoms": ["fatigue", "dizziness", "hyperpigmentation", "weight loss"],
+      "diagnosis": "Primary Adrenal Insufficiency",
+      "predicted_diagnosis": "Autoimmune Addison’s Disease",
+      "severity": "High",
+      "recommended_tests": ["ACTH stimulation test", "Serum cortisol", "Electrolytes"],
+      "treatment_plan": ["Hydrocortisone", "Fludrocortisone", "Patient education on adrenal crisis"]
+    },
+    {
+      "id": 47,
+      "category": "Endocrinology",
+      "title": "Hyperparathyroidism",
+      "description": "Patient with kidney stones and bone pain.",
+      "symptoms": ["kidney stones", "bone pain", "fatigue", "polyuria"],
+      "diagnosis": "Primary Hyperparathyroidism",
+      "predicted_diagnosis": "Secondary Hyperparathyroidism due to CKD",
+      "severity": "Medium",
+      "recommended_tests": ["Serum calcium", "PTH levels", "Vitamin D levels", "Bone density scan"],
+      "treatment_plan": ["Parathyroidectomy if severe", "Hydration", "Monitoring calcium levels"]
+    },
+    {
+      "id": 48,
+      "category": "Endocrinology",
+      "title": "Hypoparathyroidism",
+      "description": "Patient with muscle cramps and tingling in fingers and lips.",
+      "symptoms": ["muscle cramps", "paresthesia", "tetany"],
+      "diagnosis": "Hypoparathyroidism",
+      "predicted_diagnosis": "Post-surgical Hypocalcemia",
+      "severity": "Medium",
+      "recommended_tests": ["Serum calcium", "Serum PTH", "Magnesium levels"],
+      "treatment_plan": ["Calcium supplements", "Vitamin D analogs", "Regular monitoring"]
+    },
+    {
+      "id": 49,
+      "category": "Endocrinology",
+      "title": "Diabetic Ketoacidosis",
+      "description": "Patient with type 1 diabetes presenting with vomiting and confusion.",
+      "symptoms": ["vomiting", "confusion", "polyuria", "fruity breath"],
+      "diagnosis": "Diabetic Ketoacidosis (DKA)",
+      "predicted_diagnosis": "Hyperglycemic Crisis",
+      "severity": "Critical",
+      "recommended_tests": ["Blood glucose", "Serum ketones", "ABG", "Electrolytes"],
+      "treatment_plan": ["IV fluids", "Insulin infusion", "Electrolyte replacement"]
+    },
+    {
+      "id": 50,
+      "category": "Endocrinology",
+      "title": "Acromegaly",
+      "description": "Patient with enlarged hands, feet, and facial features.",
+      "symptoms": ["enlarged hands/feet", "coarse facial features", "headache", "visual disturbances"],
+      "diagnosis": "Acromegaly",
+      "predicted_diagnosis": "Growth Hormone Excess",
+      "severity": "High",
+      "recommended_tests": ["IGF-1 levels", "Oral glucose suppression test", "Pituitary MRI"],
+      "treatment_plan": ["Transsphenoidal surgery", "Somatostatin analogs", "Monitor hormone levels"]
     }
-  }
-]
+  ]
+}
+
+
+
