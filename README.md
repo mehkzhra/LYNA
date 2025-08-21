@@ -1,8 +1,8 @@
-# LYNA — Clinical Reasoning Simulator
-
+# DocQuest — Clinical Reasoning Simulator
+YOUR JOURNEY THROUGH REAL MEDICAL CASES--LEARN,PRACTICE AND GROW LIKE A DOCTOR.
 > **Educational simulation only — not medical advice.**
 
-LYNA is a lightweight backend (Python) that powers a virtual ward‑round experience for MBBS students. It provides realistic, safe case practice and an interactive “patient” chat, plus instant scoring/feedback on diagnosis, investigations, and initial management.
+DocQuest is a lightweight app that powers a virtual ward‑round experience for MBBS students. It provides realistic, safe case practice and an interactive “patient” chat, plus instant scoring/feedback on diagnosis, investigations, and initial management.
 
 ---
 
@@ -16,7 +16,7 @@ LYNA is a lightweight backend (Python) that powers a virtual ward‑round experi
 
 ## 🧭 How It Works (High‑Level)
 
-LYNA has two primary experiences:
+DocQuest has two primary experiences:
 
 1. **Case‑Based Learning**
    Students review a structured case (demographics → HPI → exam → optional labs) and submit:
@@ -44,7 +44,7 @@ App returns:
 
 ## 🧩work Flow
 
-* Load **10–20 synthetic cases** from `cases.json`.
+* Load **50 synthetic cases** from `cases.json`.
 * Provide simple toggles to **reveal prewritten investigations**.
 * Collect the student’s **diagnosis / tests / plan**.
 * Call the **Evaluator Agent** → return **scores + feedback bullets**.
